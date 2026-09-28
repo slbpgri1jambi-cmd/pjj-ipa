@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IPA Kelas 8 Tunarungu - Perkembangbiakan Hewan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fc;
+    color: #243447;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background: linear-gradient(135deg, #087f8c, #00a8a8);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* ================= NAVIGASI ================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+nav button {
+    border: none;
+    background: #e8f5f7;
+    color: #087f8c;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+nav button:hover,
+nav button.active {
+    background: #087f8c;
+    color: white;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 25px 18px 50px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* ================= JUDUL ================= */
+
+.section-title {
+    text-align: center;
+    margin: 10px 0 25px;
+}
+
+.section-title h2 {
+    color: #087f8c;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #667;
+}
+
+/* ================= CARD ================= */
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #087f8c;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+/* ================= INTRO ================= */
+
+.intro {
+    background: linear-gradient(135deg, #e0f7fa, #f5ffff);
+    border-left: 7px solid #087f8c;
+}
+
+.intro p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ================= GAMBAR MATERI ================= */
+
+.materi-image {
+    width: 100%;
+    margin: 22px auto;
+    text-align: center;
+}
+
+.materi-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 18px;
+    border: 3px solid #d9eef2;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* ================= VISUAL HEWAN ================= */
+
+.animal-visual {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.animal {
+    background: #f7fbfc;
+    border-radius: 15px;
+    padding: 15px 8px;
+    text-align: center;
+    border: 2px solid #e1f1f3;
+}
+
+.animal .emoji {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.animal strong {
+    font-size: 14px;
+}
+
+/* ================= DUA CARA ================= */
+
+.reproduction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.reproduction-card {
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 350px;
+}
+
+.ovipar {
+    background: #fff8e6;
+    border: 3px solid #f0b429;
+}
+
+.vivipar {
+    background: #edf8ef;
+    border: 3px solid #42a85f;
+}
+
+.reproduction-icon {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.reproduction-card h3 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.ovipar h3 {
+    color: #b87900;
+}
+
+.vivipar h3 {
+    color: #268343;
+}
+
+.definition {
+    background: rgba(255,255,255,0.75);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.definition strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.examples-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.example {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ================= PERBANDINGAN ================= */
+
+.comparison {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px;
+}
+
+th,
+td {
+    border: 1px solid #d9e5e8;
+    padding: 13px;
+    text-align: left;
+}
+
+th {
+    background: #087f8c;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f6fafb;
+}
+
+/* ================= INGAT ================= */
+
+.remember {
+    background: linear-gradient(135deg, #fff3cd, #fff9e9);
+    border: 2px dashed #e0a800;
+    text-align: center;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.remember h3 {
+    color: #9a6b00;
+}
+
+.remember-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.remember-item {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* ================= LKPD ================= */
+
+.student-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #d5e2e5;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #087f8c;
+}
+
+/* ================= SOAL ================= */
+
+.question {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 17px;
+    border: 1px solid #e1e8ea;
+}
+
+.question-number {
+    display: inline-block;
+    background: #087f8c;
+    color: white;
+    padding: 5px 11px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.question-text {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.option {
+    display: block;
+    background: #f6fafb;
+    margin: 7px 0;
+    padding: 10px 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.option:hover {
+    background: #e5f5f7;
+    border-color: #087f8c;
+}
+
+.option input {
+    margin-right: 8px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 90px;
+    resize: vertical;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #d5e2e5;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #087f8c;
+}
+
+/* ================= BUTTON ================= */
+
+.button-area {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.btn {
+    border: none;
+    padding: 14px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #087f8c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #05656f;
+}
+
+.btn-success {
+    background: #25a244;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #1c8436;
+}
+
+.btn-danger {
+    background: #d9534f;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b52b27;
+}
+
+/* ================= HASIL ================= */
+
+#hasil {
+    display: none;
+    background: #e9f7ef;
+    border: 2px solid #42a85f;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#hasil h3 {
+    color: #218838;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.score {
+    font-size: 45px;
+    font-weight: bold;
+    color: #087f8c;
+    margin: 10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #243447;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .animal-visual {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .reproduction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-data {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .materi-image img {
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    nav {
+        gap: 6px;
+    }
+
+    nav button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .animal-visual {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .reproduction-card {
+        padding: 18px;
+    }
+
+    .remember-box {
+        gap: 10px;
+    }
+
+    .materi-image {
+        margin: 15px auto;
+    }
+
+    .materi-image img {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="badge">
+        🔬 IPA • KELAS 8 TUNARUNGU
+    </div>
+
+    <h1>
+        🐾 Cara Perkembangbiakan Hewan
+    </h1>
+
+    <p>
+        Belajar mengenal hewan yang bertelur dan melahirkan
+    </p>
+
+</header>
+
+
+<!-- ================= NAVIGASI ================= -->
+
+<nav>
+
+    <button
+        id="btnMateri"
+        class="active"
+        onclick="showSection('materi')">
+
+        📚 Materi
+
+    </button>
+
+
+    <button
+        id="btnLKPD"
+        onclick="showSection('lkpd')">
+
+        📝 LKPD
+
+    </button>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- =====================================================
+     MATERI
+===================================================== -->
+
+<section
+    id="materi"
+    class="section active">
+
+
+    <div class="section-title">
+
+        <h2>
+            📚 Materi Pembelajaran
+        </h2>
+
+        <p>
+            Cara Perkembangbiakan Hewan
+        </p>
+
+    </div>
+
+
+    <!-- ================= PENGANTAR ================= -->
+
+    <div class="card intro">
+
+        <h3>
+            🐾 Mengapa Hewan Berkembang Biak?
+        </h3>
+
+        <p>
+            Hewan berkembang biak untuk menghasilkan keturunan.
+            Dengan berkembang biak, jenis hewan dapat terus ada
+            dan tidak punah.
+        </p>
+
+
+        <!-- GAMBAR DARI FILE -->
+        <div class="materi-image">
+
+            <img
+                src="gbr-ipa-senin28.jpg"
+                alt="Materi Cara Perkembangbiakan Hewan">
+
+        </div>
+
+
+        <!-- CONTOH HEWAN -->
+
+        <div class="animal-visual">
+
+            <div class="animal">
+                <span class="emoji">🐔</span>
+                <strong>Ayam</strong>
+            </div>
+
+            <div class="animal">
+                <span class="emoji">🦆</span>
+                <strong>Bebek</strong>
+            </div>
+
+            <div class="animal">
+                <span class="emoji">🐟</span>
+                <strong>Ikan</strong>
+            </div>
+
+            <div class="animal">
+                <span class="emoji">🐸</span>
+                <strong>Katak</strong>
+            </div>
+
+            <div class="animal">
+                <span class="emoji">🐱</span>
+                <strong>Kucing</strong>
+            </div>
+
+            <div class="animal">
+                <span class="emoji">🐄</span>
+                <strong>Sapi</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DUA CARA ================= -->
+
+    <div class="card">
+
+        <h3>
+            🔎 Dua Cara Utama Hewan Berkembang Biak
+        </h3>
+
+
+        <div class="reproduction-grid">
+
+
+            <!-- ================= OVIPAR ================= -->
+
+            <div class="reproduction-card ovipar">
+
+                <div class="reproduction-icon">
+                    🥚
+                </div>
+
+                <h3>
+                    OVIPAR
+                </h3>
+
+
+                <div class="definition">
+
+                    <strong>
+                        🐣 Artinya: Bertelur
+                    </strong>
+
+                    Hewan ovipar berkembang biak dengan cara
+                    <b>bertelur</b>.
+                    Telur kemudian menetas menjadi anak hewan.
+
+                </div>
+
+
+                <div class="examples-title">
+
+                    Contoh hewan ovipar:
+
+                </div>
+
+
+                <div class="examples">
+
+                    <div class="example">
+                        🐔 Ayam
+                    </div>
+
+                    <div class="example">
+                        🦆 Bebek
+                    </div>
+
+                    <div class="example">
+                        🐟 Ikan
+                    </div>
+
+                    <div class="example">
+                        🐸 Katak
+                    </div>
+
+                    <div class="example">
+                        🐦 Burung
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= VIVIPAR ================= -->
+
+            <div class="reproduction-card vivipar">
+
+                <div class="reproduction-icon">
+                    👶
+                </div>
+
+                <h3>
+                    VIVIPAR
+                </h3>
+
+
+                <div class="definition">
+
+                    <strong>
+                        🤰 Artinya: Melahirkan
+                    </strong>
+
+                    Hewan vivipar berkembang biak dengan cara
+                    <b>melahirkan</b>.
+                    Anak berkembang di dalam tubuh induknya
+                    sebelum dilahirkan.
+
+                </div>
+
+
+                <div class="examples-title">
+
+                    Contoh hewan vivipar:
+
+                </div>
+
+
+                <div class="examples">
+
+                    <div class="example">
+                        🐱 Kucing
+                    </div>
+
+                    <div class="example">
+                        🐶 Anjing
+                    </div>
+
+                    <div class="example">
+                        🐄 Sapi
+                    </div>
+
+                    <div class="example">
+                        🐐 Kambing
+                    </div>
+
+                    <div class="example">
+                        🐋 Paus
+                    </div>
+
+                    <div class="example">
+                        🐬 Lumba-lumba
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PERBANDINGAN ================= -->
+
+    <div class="card comparison">
+
+        <h3>
+            📊 Perbandingan Ovipar dan Vivipar
+        </h3>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Aspek
+                </th>
+
+                <th>
+                    🥚 Ovipar
+                </th>
+
+                <th>
+                    👶 Vivipar
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Cara berkembang biak</b>
+                </td>
+
+                <td>
+                    Bertelur
+                </td>
+
+                <td>
+                    Melahirkan
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Perkembangan anak</b>
+                </td>
+
+                <td>
+                    Di dalam telur
+                </td>
+
+                <td>
+                    Di dalam tubuh induk
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Contoh hewan</b>
+                </td>
+
+                <td>
+                    Ayam, bebek, ikan, katak, burung
+                </td>
+
+                <td>
+                    Kucing, anjing, sapi, kambing,
+                    paus, lumba-lumba
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- ================= INGAT ================= -->
+
+    <div class="remember">
+
+        <h3>
+            💡 INGAT MUDAH!
+        </h3>
+
+
+        <div class="remember-box">
+
+            <div class="remember-item">
+                🥚 OVIPAR = BERTELUR
+            </div>
+
+
+            <div class="remember-item">
+                👶 VIVIPAR = MELAHIRKAN
+            </div>
+
+        </div>
+
+
+        <p style="margin-top:20px; font-size:18px; font-weight:bold;">
+
+            Hewan berkembang biak agar jenisnya
+            dapat terus ada dan tidak punah.
+
+        </p>
+
+    </div>
+
+
+    <!-- ================= KE LKPD ================= -->
+
+    <div class="button-area">
+
+        <button
+            class="btn btn-primary"
+            onclick="showSection('lkpd')">
+
+            📝 Mulai LKPD
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LKPD
+===================================================== -->
+
+<section
+    id="lkpd"
+    class="section">
+
+
+    <div class="section-title">
+
+        <h2>
+            📝 LKPD
+        </h2>
+
+        <p>
+            Latihan Cara Perkembangbiakan Hewan
+        </p>
+
+    </div>
+
+
+    <!-- ================= DATA SISWA ================= -->
+
+    <div class="card">
+
+        <h3>
+            👨‍🎓 Data Peserta Didik
+        </h3>
+
+
+        <div class="student-data">
+
+            <div>
+
+                <label for="nama">
+                    Nama Lengkap
+                </label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Tuliskan nama lengkap">
+
+            </div>
+
+
+            <div>
+
+                <label for="kelas">
+                    Kelas
+                </label>
+
+                <input
+                    type="text"
+                    id="kelas"
+                    placeholder="Contoh: VIII B">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         PILIHAN GANDA
+    ================================================== -->
+
+    <div class="card">
+
+        <h3>
+            🔵 A. Pilihan Ganda
+        </h3>
+
+        <p style="margin-bottom:20px;">
+            Pilih jawaban yang paling tepat!
+        </p>
+
+
+        <!-- SOAL 1 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                1
+            </span>
+
+            <div class="question-text">
+
+                Hewan berkembang biak untuk menghasilkan ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q1" value="A">
+                A. makanan
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="B">
+                B. keturunan
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="C">
+                C. tempat tinggal
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="D">
+                D. air
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 2 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                2
+            </span>
+
+            <div class="question-text">
+
+                Hewan yang berkembang biak dengan bertelur disebut ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q2" value="A">
+                A. vivipar
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="B">
+                B. ovipar
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="C">
+                C. mamalia
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="D">
+                D. predator
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 3 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                3
+            </span>
+
+            <div class="question-text">
+
+                Contoh hewan ovipar adalah ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q3" value="A">
+                A. kucing
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="B">
+                B. sapi
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="C">
+                C. ayam
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="D">
+                D. kambing
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 4 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                4
+            </span>
+
+            <div class="question-text">
+
+                Bebek berkembang biak dengan cara ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q4" value="A">
+                A. melahirkan
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="B">
+                B. bertelur
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="C">
+                C. membelah diri
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="D">
+                D. bertunas
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 5 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                5
+            </span>
+
+            <div class="question-text">
+
+                Berikut yang termasuk hewan ovipar adalah ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q5" value="A">
+                A. ikan
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="B">
+                B. kucing
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="C">
+                C. sapi
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="D">
+                D. anjing
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 6 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                6
+            </span>
+
+            <div class="question-text">
+
+                Hewan yang berkembang biak dengan melahirkan disebut ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q6" value="A">
+                A. ovipar
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q6" value="B">
+                B. vivipar
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q6" value="C">
+                C. reptil
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q6" value="D">
+                D. amfibi
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 7 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                7
+            </span>
+
+            <div class="question-text">
+
+                Hewan berikut yang termasuk vivipar adalah ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q7" value="A">
+                A. ayam
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q7" value="B">
+                B. bebek
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q7" value="C">
+                C. kucing
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q7" value="D">
+                D. ikan
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 8 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                8
+            </span>
+
+            <div class="question-text">
+
+                Sapi berkembang biak dengan cara ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q8" value="A">
+                A. bertelur
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q8" value="B">
+                B. melahirkan
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q8" value="C">
+                C. bertunas
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q8" value="D">
+                D. membelah diri
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 9 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                9
+            </span>
+
+            <div class="question-text">
+
+                Hewan yang termasuk vivipar adalah ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q9" value="A">
+                A. katak
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q9" value="B">
+                B. burung
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q9" value="C">
+                C. kambing
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q9" value="D">
+                D. ayam
+            </label>
+
+        </div>
+
+
+        <!-- SOAL 10 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                10
+            </span>
+
+            <div class="question-text">
+
+                Paus dan lumba-lumba berkembang biak dengan cara ....
+
+            </div>
+
+
+            <label class="option">
+                <input type="radio" name="q10" value="A">
+                A. bertelur
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q10" value="B">
+                B. melahirkan
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q10" value="C">
+                C. bertunas
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q10" value="D">
+                D. membelah diri
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         JAWABAN SINGKAT
+    ================================================== -->
+
+    <div class="card">
+
+        <h3>
+            🟢 B. Jawaban Singkat
+        </h3>
+
+        <p style="margin-bottom:20px;">
+            Jawablah dengan singkat dan jelas!
+        </p>
+
+
+        <!-- ESSAY 1 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                1
+            </span>
+
+            <div class="question-text">
+
+                Apa yang dimaksud dengan hewan ovipar?
+
+            </div>
+
+
+            <textarea
+                id="essay1"
+                placeholder="Tuliskan jawabanmu..."></textarea>
+
+        </div>
+
+
+        <!-- ESSAY 2 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                2
+            </span>
+
+            <div class="question-text">
+
+                Sebutkan 3 contoh hewan yang berkembang biak dengan bertelur!
+
+            </div>
+
+
+            <textarea
+                id="essay2"
+                placeholder="Tuliskan jawabanmu..."></textarea>
+
+        </div>
+
+
+        <!-- ESSAY 3 -->
+
+        <div class="question">
+
+            <span class="question-number">
+                3
+            </span>
+
+            <div class="question-text">
+
+                Sebutkan 3 contoh hewan yang berkembang biak dengan melahirkan!
+
+            </div>
+
+
+            <textarea
+                id="essay3"
+                placeholder="Tuliskan jawabanmu..."></textarea>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= BUTTON ================= -->
+
+    <div class="button-area">
+
+        <button
+            class="btn btn-primary"
+            onclick="periksaJawaban()">
+
+            ✅ Periksa Jawaban
+
+        </button>
+
+
+        <button
+            class="btn btn-danger"
+            onclick="resetLKPD()">
+
+            🔄 Ulangi
+
+        </button>
+
+    </div>
+
+
+    <!-- ================= HASIL ================= -->
+
+    <div id="hasil">
+
+        <h3>
+            🎉 Hasil LKPD
+        </h3>
+
+
+        <p id="namaHasil"></p>
+
+
+        <div
+            class="score"
+            id="nilai">
+
+            0
+
+        </div>
+
+
+        <p>
+            Nilai Pilihan Ganda
+        </p>
+
+
+        <p style="margin-top:10px;">
+            Jawaban singkat akan diperiksa oleh guru.
+        </p>
+
+
+        <div class="button-area">
+
+            <button
+                class="btn btn-success"
+                onclick="kirimWhatsApp()">
+
+                📱 Kirim Hasil ke WhatsApp Guru
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        🔬 IPA Kelas 8 Tunarungu
+    </p>
+
+    <p>
+        Materi: Cara Perkembangbiakan Hewan
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   NAVIGASI
+===================================================== */
+
+function showSection(section) {
+
+    document
+        .querySelectorAll('.section')
+        .forEach(function(el) {
+
+            el.classList.remove('active');
+
+        });
+
+
+    document
+        .getElementById(section)
+        .classList.add('active');
+
+
+    document
+        .getElementById('btnMateri')
+        .classList.remove('active');
+
+
+    document
+        .getElementById('btnLKPD')
+        .classList.remove('active');
+
+
+    if (section === 'materi') {
+
+        document
+            .getElementById('btnMateri')
+            .classList.add('active');
+
+    }
+    else {
+
+        document
+            .getElementById('btnLKPD')
+            .classList.add('active');
+
+    }
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+}
+
+
+/* =====================================================
+   KUNCI JAWABAN
+===================================================== */
+
+const kunci = {
+
+    q1: "B",
+    q2: "B",
+    q3: "C",
+    q4: "B",
+    q5: "A",
+    q6: "B",
+    q7: "C",
+    q8: "B",
+    q9: "C",
+    q10: "B"
+
+};
+
+
+let nilaiAkhir = 0;
+let jumlahBenar = 0;
+
+
+/* =====================================================
+   PERIKSA JAWABAN
+===================================================== */
+
+function periksaJawaban() {
+
+    const nama =
+        document
+            .getElementById("nama")
+            .value
+            .trim();
+
+
+    const kelas =
+        document
+            .getElementById("kelas")
+            .value
+            .trim();
+
+
+    if (nama === "") {
+
+        alert(
+            "Silakan isi nama terlebih dahulu."
+        );
+
+        document
+            .getElementById("nama")
+            .focus();
+
+        return;
+
+    }
+
+
+    if (kelas === "") {
+
+        alert(
+            "Silakan isi kelas terlebih dahulu."
+        );
+
+        document
+            .getElementById("kelas")
+            .focus();
+
+        return;
+
+    }
+
+
+    jumlahBenar = 0;
+
+
+    for (let i = 1; i <= 10; i++) {
+
+        const pilihan =
+            document.querySelector(
+                'input[name="q' + i + '"]:checked'
+            );
+
+
+        if (
+            pilihan &&
+            pilihan.value === kunci["q" + i]
+        ) {
+
+            jumlahBenar++;
+
+        }
+
+    }
+
+
+    nilaiAkhir =
+        jumlahBenar * 10;
+
+
+    document
+        .getElementById("nilai")
+        .textContent =
+        nilaiAkhir;
+
+
+    document
+        .getElementById("namaHasil")
+        .textContent =
+        "Nama: " +
+        nama +
+        " | Kelas: " +
+        kelas;
+
+
+    document
+        .getElementById("hasil")
+        .style.display =
+        "block";
+
+
+    document
+        .getElementById("hasil")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =====================================================
+   KIRIM HASIL KE WHATSAPP GURU
+===================================================== */
+
+function kirimWhatsApp() {
+
+    const nama =
+        document
+            .getElementById("nama")
+            .value
+            .trim();
+
+
+    const kelas =
+        document
+            .getElementById("kelas")
+            .value
+            .trim();
+
+
+    const essay1 =
+        document
+            .getElementById("essay1")
+            .value
+            .trim();
+
+
+    const essay2 =
+        document
+            .getElementById("essay2")
+            .value
+            .trim();
+
+
+    const essay3 =
+        document
+            .getElementById("essay3")
+            .value
+            .trim();
+
+
+    let daftarJawaban = "";
+
+
+    for (let i = 1; i <= 10; i++) {
+
+        const pilihan =
+            document.querySelector(
+                'input[name="q' + i + '"]:checked'
+            );
+
+
+        daftarJawaban +=
+            "Soal " +
+            i +
+            ": " +
+            (
+                pilihan
+                    ? pilihan.value
+                    : "Belum dijawab"
+            ) +
+            "\n";
+
+    }
+
+
+    const pesan =
+`HASIL LKPD IPA KELAS 8 TUNARUNGU
+Materi: Cara Perkembangbiakan Hewan
+
+Nama: ${nama}
+Kelas: ${kelas}
+
+NILAI PILIHAN GANDA
+Benar: ${jumlahBenar} dari 10
+Nilai: ${nilaiAkhir}
+
+JAWABAN PILIHAN GANDA:
+${daftarJawaban}
+
+JAWABAN SINGKAT:
+
+1. Apa yang dimaksud dengan hewan ovipar?
+${essay1 || "Belum dijawab"}
+
+2. Sebutkan 3 contoh hewan yang berkembang biak dengan bertelur!
+${essay2 || "Belum dijawab"}
+
+3. Sebutkan 3 contoh hewan yang berkembang biak dengan melahirkan!
+${essay3 || "Belum dijawab"}
+
+Mohon diperiksa jawaban singkatnya.
+Terima kasih.`;
+
+
+    /* NOMOR WHATSAPP GURU */
+
+    const nomorGuru =
+        "6282214222280";
+
+
+    const url =
+        "https://wa.me/" +
+        nomorGuru +
+        "?text=" +
+        encodeURIComponent(pesan);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   RESET LKPD
+===================================================== */
+
+function resetLKPD() {
+
+    if (
+        !confirm(
+            "Yakin ingin mengulang LKPD?"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    document
+        .getElementById("nama")
+        .value = "";
+
+
+    document
+        .getElementById("kelas")
+        .value = "";
+
+
+    document
+        .getElementById("essay1")
+        .value = "";
+
+
+    document
+        .getElementById("essay2")
+        .value = "";
+
+
+    document
+        .getElementById("essay3")
+        .value = "";
+
+
+    document
+        .querySelectorAll(
+            'input[type="radio"]'
+        )
+        .forEach(function(input) {
+
+            input.checked = false;
+
+        });
+
+
+    document
+        .getElementById("hasil")
+        .style.display = "none";
+
+
+    jumlahBenar = 0;
+    nilaiAkhir = 0;
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
